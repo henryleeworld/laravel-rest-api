@@ -1,4 +1,4 @@
-# Laravel 7 具象狀態傳輸應用程式介面
+# Laravel 8 具象狀態傳輸應用程式介面
 
 一組實現效率、可讀性、還有可擴展分散式系統的軟體架構設計規範，符合具象狀態傳輸原則的系統有五個主要特性/限制：伺服器/客戶端分離、無狀態、可快取、分層、統一操作介面。
 
@@ -12,25 +12,27 @@ $ git clone
 ```sh
 $ composer install
 ```
-- 產⽣ Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
+- 產生 Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
 ```sh
 $ php artisan key:generate
 ```
-- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。Passport 服務提供者在框架中已註冊好本身的資料庫遷移目錄，所以你應該在遷移資料庫之後註冊這個提供者。Passport 的遷移檔會建立應用程式需要儲存客戶端與 Access Token 的資料表。
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。Passport 服務提供者在框架中已註冊好本身的資料庫遷移目錄，所以你應該在遷移資料庫之後註冊這個提供者。Passport 的遷移檔會建立應用程式需要儲存客戶端與存取權杖的資料表。
 ```sh
 $ php artisan migrate
 ```
-- 執行 __Artisan__ 指令的 __passport:install__ 會建立用來產生安全 Access Token 的加密金鑰。此外，該指令會建立用於產生 Access Token 的「個人存取」與「密碼授權」的客戶端。
+- 執行 __Artisan__ 指令的 __passport:install__ 會建立用來產生安全存取權杖的加密金鑰。此外，該指令會建立用於產生存取權杖的「個人存取」與「密碼授權」的客戶端。
 ```sh
 $ php artisan passport:install
 ```
-- 利用工具輸入已定義的路由 URL 模擬 HTTP 請求，例如：http://127.0.0.1:8000/api/register。
+- 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
+- 你可以經由 `/api/register` 來進行註冊使用者。
+- 你可以經由 `/api/login` 來進行使用者登入。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/y1DjDzl.png)
+![](https://i.imgur.com/u4B4flr.png)
 > 傳送 HTML 表單資料註冊建立使用者
 
-![](https://i.imgur.com/bwyVWsH.png)
+![](https://i.imgur.com/QUg6dSm.png)
 > 傳送 HTML 表單資料使用建立使用者來做登入

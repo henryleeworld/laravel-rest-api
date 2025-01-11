@@ -1,4 +1,4 @@
-# Laravel 9 具象狀態傳輸應用程式介面
+# Laravel 11 具象狀態傳輸應用程式介面
 
 一組實現效率、可讀性、還有可擴展分散式系統的軟體架構設計規範，符合具象狀態傳輸原則的系統有五個主要特性/限制：伺服器/客戶端分離、無狀態、可快取、分層、統一操作介面。
 
@@ -20,19 +20,23 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate
 ```
-- 執行 __Artisan__ 指令的 __passport:install__ 會建立用來產生安全存取權杖的加密金鑰。此外，該指令會建立用於產生存取權杖的「個人存取」與「密碼授權」的客戶端。
-```sh
-$ php artisan passport:install
-```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
-- 你可以經由 `/api/register` 來進行註冊使用者。
-- 你可以經由 `/api/login` 來進行使用者登入。
+- 你可以經由 `/api/v1/register` 來進行註冊使用者。
+- 你可以經由 `/api/v1/login` 來進行使用者登入。
+- 或可以經由 `/api/v1/user` 來進行個人資料取得。
+- 或可以經由 `/api/v1/logout` 來進行使用者登出。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/VpxVxqy.png)
+![](https://i.imgur.com/ipOt9xf.png)
 > 傳送 HTML 表單資料註冊建立使用者
 
-![](https://i.imgur.com/AENk5O9.png)
+![](https://i.imgur.com/HztPBLD.png)
 > 傳送 HTML 表單資料使用建立使用者來做登入
+
+![](https://i.imgur.com/TMbwRpQ.png)
+> 在 Authorization 請求標頭中指定存取權杖作為憑證令牌來做個人資料取得
+
+![](https://i.imgur.com/TwX3bUx.png)
+> 在 Authorization 請求標頭中指定存取權杖作為憑證令牌來做登出

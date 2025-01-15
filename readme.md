@@ -16,7 +16,7 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。Passport 服務提供者在框架中已註冊好本身的資料庫遷移目錄，所以你應該在遷移資料庫之後註冊這個提供者。Passport 的遷移檔會建立應用程式需要儲存客戶端與存取權杖的資料表。
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
 ```sh
 $ php artisan migrate
 ```

@@ -1,6 +1,6 @@
 {
-    "The user registered successfully.": "使用者註冊成功。",
+    "The user registered successfully.": "使用者成功註冊。",
     "Unauthorised.": "未經授權。",
-    "User login successfully.": "使用者登入成功。",
-    "You're logged out!": "使用者登出成功。"
+    "User login successfully.": "使用者成功登入。",
+    "You're logged out!": "您已登出！"
 }

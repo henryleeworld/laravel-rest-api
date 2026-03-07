@@ -12,27 +12,6 @@ use Illuminate\Validation\Rules;
 class AuthController extends BaseController
 {
     /**
-     * Register api
-     */
-    public function register(Request $request): JsonResponse
-    {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', Rules\Password::defaults()],
-            'c_password' => 'required|same:password',
-        ]);
-
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => $request->string('password'),
-        ]);
-
-        return $this->sendResponse(null, __('The user registered successfully.'));
-    }
-   
-    /**
      * Login api
      */
     public function login(Request $request): JsonResponse
@@ -60,5 +39,26 @@ class AuthController extends BaseController
         auth()->user()->tokens()->delete();
 
         return $this->sendResponse(null, __('You\'re logged out!'));
+    }
+
+    /**
+     * Register api
+     */
+    public function register(Request $request): JsonResponse
+    {
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'password' => ['required', Rules\Password::defaults()],
+            'c_password' => 'required|same:password',
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $request->string('password'),
+        ]);
+
+        return $this->sendResponse(null, __('The user registered successfully.'));
     }
 }

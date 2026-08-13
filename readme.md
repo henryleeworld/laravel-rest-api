@@ -1,4 +1,4 @@
-# Laravel 12 具象狀態傳輸應用程式介面
+# Laravel 13 具象狀態傳輸應用程式介面
 
 一組實現效率、可讀性、還有可擴展分散式系統的軟體架構設計規範，符合具象狀態傳輸原則的系統有五個主要特性/限制：伺服器/客戶端分離、無狀態、可快取、分層、統一操作介面。
 
@@ -29,14 +29,14 @@ $ php artisan migrate
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/TnD5q7e.png)
+![](https://i.imgur.com/x3BCgym.png)
 > 傳送 HTML 表單資料註冊建立使用者
 
-![](https://i.imgur.com/7Bo7VjC.png)
+![](https://i.imgur.com/070iumF.png)
 > 傳送 HTML 表單資料使用建立使用者來做登入
 
-![](https://i.imgur.com/Um0gTC1.png)
+![](https://i.imgur.com/c4wN9mN.png)
 > 在 Authorization 請求標頭中指定存取權杖作為憑證令牌來做個人資料取得
 
-![](https://i.imgur.com/732QyOG.png)
+![](https://i.imgur.com/rXEaJpI.png)
 > 在 Authorization 請求標頭中指定存取權杖作為憑證令牌來做登出

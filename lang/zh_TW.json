@@ -1,6 +1,13 @@
 {
-    "The user registered successfully.": "使用者成功註冊。",
-    "Unauthorised.": "未經授權。",
-    "User login successfully.": "使用者成功登入。",
-    "You're logged out!": "您已登出！"
+    " - API Docs": "—應用程式介面文件",
+    "If the email exists, a reset code has been sent.": "如果此電子郵件存在，重設驗證碼已傳送。",
+    "If you did not request a password reset, no further action is required.": "如果您未要求重設密碼，請忽略此郵件。",
+    "Password has been reset.": "密碼已重設。",
+    "Password Reset Code": "密碼重設驗證碼",
+    "Password updated.": "密碼已更新。",
+    "Thanks,": "感謝,",
+    "The reset code is invalid or has expired.": "重設驗證碼無效或已過期。",
+    "This code will expire in :count minutes.": "驗證碼將會在 :count 分鐘後失效。",
+    "You are receiving this email because we received a password reset request for your account.": "您收到此電子郵件是因為我們收到了重設密碼的要求。",
+    "Your password reset code": "您的密碼重設驗證碼"
 }

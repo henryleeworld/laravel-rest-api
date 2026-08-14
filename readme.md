@@ -20,23 +20,34 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate
 ```
+- 運行單元測試和功能測試。大多數的單元測試可能只專注於單一個方法，功能測試則可以測試大部分的程式碼，包含一些物件如何進行互動，甚至是完整的 HTTP 請求到一個 JSON 端點。
+```sh
+$ php artisan test
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/api/v1/register` 來進行註冊使用者。
 - 你可以經由 `/api/v1/login` 來進行使用者登入。
 - 或可以經由 `/api/v1/user` 來進行個人資料取得。
 - 或可以經由 `/api/v1/logout` 來進行使用者登出。
+- 你可以經由 `/docs/api` 來進行應用程式介面文件閱讀。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/x3BCgym.png)
+![](https://i.imgur.com/DYRyldq.png)
+> 檢查程式碼是否如預期般執行
+
+![](https://i.imgur.com/ZGfZ8ZK.png)
 > 傳送 HTML 表單資料註冊建立使用者
 
-![](https://i.imgur.com/070iumF.png)
+![](https://i.imgur.com/9D4xPei.png)
 > 傳送 HTML 表單資料使用建立使用者來做登入
 
-![](https://i.imgur.com/c4wN9mN.png)
+![](https://i.imgur.com/iU0bfXq.png)
 > 在 Authorization 請求標頭中指定存取權杖作為憑證令牌來做個人資料取得
 
-![](https://i.imgur.com/rXEaJpI.png)
+![](https://i.imgur.com/tYqwIP4.png)
 > 在 Authorization 請求標頭中指定存取權杖作為憑證令牌來做登出
+
+![](https://i.imgur.com/SdUomcQ.png)
+> 建議找不同領域或程度的開發者來閱讀文件，確認文件的內容適合任何程度的人閱讀
